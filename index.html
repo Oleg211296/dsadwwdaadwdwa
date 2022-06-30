@@ -94,12 +94,12 @@
     <script type="text/javascript">
       vkBridge.send('VKWebAppInit');
 
-
       function getFrend(){
         vkBridge.send("VKWebAppShowInviteBox", {})
         .then(data => console.log(data.success))  
         .catch(error => console.log(error));
       }
+
       function auth(){
         vkBridge.send('VKWebAppGetUserInfo').then(_info =>{
         console.log(_info);
